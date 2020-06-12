@@ -1,3 +1,4 @@
+const fs = require('fs');
 const artists = [
 	{
 		id: 0,
@@ -228,7 +229,7 @@ const artists = [
 (1) Name of the first artist (0th index) in the array
 (2) Bio of the third artist (2nd index) in the array */
 
-// console.log(artists[0]);
+// console.log(artists[0].name);
 // console.log(artists[2].bio);
 
 /* Task 2: There is a typo in your dataset 😱 The 9th artist, Vincent Van Gogh is currently Vincent Van Dough. Use an array method to fix this issue and console.log() to check your work. */
@@ -249,7 +250,7 @@ function getArtistByIndex(array, index) {
 	return `The artist at index ${index} is ${name}`;
 }
 
-// console.log(getArtistByIndex(artists,0))
+// console.log(getArtistByIndex(artists, 2));
 
 /**
 
@@ -257,19 +258,26 @@ function getArtistByIndex(array, index) {
 /* Task 4: Create a function called get20s() that takes data as an argument and returns an array with names of artists who lived in the 20th century (1900-2000) */
 
 function get20s(data) {
-	let artistsIn20s = [];
-	for (let i = 0; i < data.length; i++) {
-		const element = data[i];
-		let start = Number(element.years.split(' ')[0]);
-		let end = Number(element.years.split(' ')[2]);
-		if (start >= 1900 && end <= 2000) {
-			artistsIn20s.push(element.name);
-		}
-	}
-	return artistsIn20s;
+	// let artistsWhoLivedIn20thCentury = [];
+	// for (let i = 0; i < data.length; i++) {
+	// 	const element = data[i];
+	// 	let start = Number(element.years.split(' ')[0]);
+	// 	let end = Number(element.years.split(' ')[2]);
+	// 	if (start >= 1900 && end <= 2000) {
+	// 		artistsWhoLivedIn20thCentury.push(element.name);
+	// 	}
+	// }
+
+	// let artistsWhoLivedIn20thCentury = data.filter((el) => {
+	// 	let start = Number(el.years.split(' ')[0]);
+	// 	let end = Number(el.years.split(' ')[2]);
+	// 	return start >= 1900 && end <= 2000
+	// });
+
+	// return artistsWhoLivedIn20thCentury;
 	/* Code here */
 }
-// console.log(get20s(artists))
+// console.log(get20s(artists));
 
 /* Task 5: Create a function called `removeArtist` that takes two arguments:
  *     (1) artists array
@@ -319,7 +327,7 @@ function addArtist(arr) {
 	return artists;
 }
 
-console.log(addArtist([ 'Isaiah', '2002-?', 'Fullstack', 'White', 'lorem ipsum dollar' ]));
+// console.log(addArtist([ 'Isaiah', '2002-?', 'Fullstack', 'White', 'lorem ipsum dollar' ]));
 
 /* Task 7: Create a function called lotsOfArt() that takes one argument: 
 
@@ -339,11 +347,16 @@ function lotsOfArt(arr) {
 			over100Paintings.push(name);
 		}
 	}
+
+	// let over100Paintings = arr.filter((el) => {
+	// 	return el.paintings > 100;
+	// });
+
 	return over100Paintings;
 	/* Code here */
 }
 
-// console.log(lotsOfArt(artists));
+console.log(lotsOfArt(artists));
 // 🎨🎨 STRETCH 🎨🎨//
 
 /* STRETCH 1: Programtically console.log HTML element structure.
@@ -366,14 +379,6 @@ The function should console.log 50 chunks of HTML code that match the structure 
 
 ‼️ You do **NOT** need to get these to display on your page, but you can copy and paste the result into your HTML file if you'd like to see what that would look like. */
 
-function getHTML(/* Code here */) {
-	/* Code here */
-}
-
 /* STRETCH 2: Create a function called `randomize` that takes a data array as an argument and returns a the same array in a randomized order. */
-
-function randomize(/* Code here */) {
-	/* Code here */
-}
 
 /* STRETCH 3: Use advanced array methods (.map, .reduce, .filer) to refactor your MVP code (create an array of all artists born in the 1900s with .filter, for example) */

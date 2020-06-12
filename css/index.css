@@ -197,22 +197,37 @@ button:hover {
 /*Artists Section Styles */
 .artists-container {
 	display: flex;
-	justify-content: space-around;
-	margin: 0 auto;
+    margin: 0 auto;
 }
 
 .artist {
-	width: 40%;
+	width: 100%;
     text-align: center;
+    margin: 1%;
 }
 
 
+.artist img {
+	width: 60%;
+    height: auto;
+    
+}
 
 @media(max-width: 850px){
     .title-container div {
 		width: 100%;
 		height: 50vh;
-	}
+    }
+    .artist {
+        width: 100%;
+        font-size: x-small;
+        
+    }
+    nav{
+        width: 80%;
+    }
+ 
+    
 }
 
 @media (max-width: 500px) {
@@ -222,30 +237,20 @@ button:hover {
 		align-items: center;
 	}
 	.artist {
-		width: 50%;
+        width: 100%;
+        font-size: x-small;
 	}
 
 	.title-container div {
 		width: 100%;
         height: 30vh;
     }
+    .artist img{
+        width: 60%;
+        height: auto;
+    }
     h1{
         font-size: 4rem;
     }
-    
-    
-}
-
-
-
-.artist img {
-	width: 100%;
-    height: auto;
-    
-}
-
-.artist img:hover {
-	width: 100%;
-    height: auto;
-    border: 1px solid blue;
+ 
 }
