@@ -126,11 +126,17 @@ button:hover{
     width:80%;
     margin:0 auto;
 }
-
-.artist{
-    width:40%;
-    text-align:center;
+@media (max-width: 500px) {
+	.artists-container {
+		grid-template-columns: 1fr;
+	}
 }
+
+.artist {
+	width: 100%;
+	text-align: center;
+}
+
 .artist img{
     width:100%;
 }
